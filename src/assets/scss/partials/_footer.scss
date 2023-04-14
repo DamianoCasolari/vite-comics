@@ -1,6 +1,9 @@
 @use "./variables" as *;
 @use "./utility_selector" as *;
 
+
+// TOP FOOTER SELECTRO 
+
 #app_footer {
     background-color: $clr_footer;
     color: $clr_total_light;
@@ -9,7 +12,6 @@
         background-image: url(../img/footer-bg.jpg);
         background-size: cover;
         background-position: center;
-        height: 370px;
 
         .info_top_footer {
             height: 100%;
@@ -18,10 +20,15 @@
                 list-style: none;
 
                 a {
-
-                    font-family: 'Roboto', sans-serif;
+                    font-family: 'Schibsted Grotesk', sans-serif;
                     color: $clr_pale_light;
                     font-weight: 300;
+                    line-height: 20px;
+                    transition-duration: 0.3s;
+                }
+
+                & a:hover {
+                    color: $clr_total_light;
                 }
             }
 
@@ -37,17 +44,65 @@
         }
     }
 
-
+    // BOTTOM FOOTER SELECTOR 
 
     .bottom_footer {
-        height: 115px;
 
-
-        .link_container a {
-            color: $clr_total_light;
+        .link_container {
             border: 2px solid $clr_extra_options;
             padding: 15px 20px;
+            text-align: center;
+            margin: 10px 0;
+            transition-duration: 0.4s;
+            cursor: pointer;
+
+            &:hover {
+                // border: 2px solid $clr_total_light;
+                background-image: url(../img/jumbotron.jpg);
+                background-size: cover;
+                background-position: bottom;
+            }
+
+            &:hover a {
+                text-shadow: 0px 0px 6px $clr_primary;
+            }
+
+            a {
+                color: $clr_total_light;
+                transition-duration: 0.3s;
+
+            }
         }
 
+        nav {
+            display: flex;
+            justify-content: center;
+
+            & div:first-child {
+                color: $clr_extra_options;
+            }
+
+            & a:hover {
+                filter: brightness(180%);
+            }
+
+
+        }
+
+    }
+}
+
+// Media Query 
+
+@media screen and (min-width: 576px) {
+    .bottom_footer {
+        height: 115px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .top_footer.my_background {
+        height: 390px !important;
     }
 }
