@@ -14,14 +14,16 @@
         .info_top_footer {
             height: 100%;
 
-
             ul li {
                 list-style: none;
-                font-family: 'Roboto', sans-serif;
-                color: $clr_pale_light;
-                font-weight: 300;
-            }
 
+                a {
+
+                    font-family: 'Roboto', sans-serif;
+                    color: $clr_pale_light;
+                    font-weight: 300;
+                }
+            }
 
 
             .img_container {
@@ -39,5 +41,13 @@
 
     .bottom_footer {
         height: 115px;
+
+
+        .link_container a {
+            color: $clr_total_light;
+            border: 2px solid $clr_extra_options;
+            padding: 15px 20px;
+        }
+
     }
 }
