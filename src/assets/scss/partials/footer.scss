@@ -1,0 +1,17 @@
+@use "./variables" as *;
+
+#app_footer {
+    background-color: $clr_footer;
+}
+
+
+.top_footer.my_background {
+    background-image: url(../img/footer-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 370px;
+}
+
+.bottom_footer {
+    height: 115px;
+}
