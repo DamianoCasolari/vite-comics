@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./utility_selector" as *;
 
 #app_footer {
     background-color: $clr_footer;

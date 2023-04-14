@@ -3,7 +3,10 @@
 import OptionBanner from "./OptionBanner.vue"
 
 export default {
-    name: "OptionBanner",
+    name: "SiteMain",
+    components: {
+        OptionBanner
+    },
     data() {
         return {
 
@@ -12,6 +15,14 @@ export default {
 }
 </script>
         
-<template></template>
+<template>
+    <main id="app_main">
+        <div class="main_content"></div>
+
+
+
+        <OptionBanner />
+    </main>
+</template>
 
 <style lang="scss" scoped></style>

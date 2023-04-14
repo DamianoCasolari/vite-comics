@@ -45,7 +45,8 @@ export default {
                     name: "SHOP",
                     link: "#",
                 }
-            ]
+            ],
+            currentIndex: 0,
         }
     }
 }
@@ -61,8 +62,8 @@ export default {
             <nav>
                 <button class="d-lg-none menu_hamburger">&#9776;</button>
                 <div class="nav_option fw-bold d-none d-lg-flex">
-                    <div v-for="link in navLinks" class="mx-2">
-                        <a class="text-dark" href="#">{{ link.name }}</a>
+                    <div v-for="link, index in navLinks" class="mx-3" :class="index == 0 ? 'active' : ''">
+                        <a href="#">{{ link.name }}</a>
                     </div>
                 </div>
             </nav>
@@ -71,12 +72,4 @@ export default {
     </header>
 </template>
 
-<style lang="scss" scoped>
-.menu_hamburger {
-    font-size: 30px;
-    font-weight: bold;
-    border: none;
-    background-color: transparent;
-
-}
-</style>
+<style lang="scss" scoped></style>

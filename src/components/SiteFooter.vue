@@ -10,7 +10,7 @@ export default {
         
 <template>
     <footer id="app_footer">
-        <div class="container_footer">
+        <div class="container_footer fs_25">
 
             <div class="top_footer my_background">
                 <div class="info_top_footer">

@@ -3,4 +3,27 @@
 .container_header {
     height: 115px;
     background-color: $clr_total_light;
+
+    .menu_hamburger {
+        font-size: 30px;
+        font-weight: bold;
+        border: none;
+        background-color: transparent;
+
+    }
+
+    a {
+        color: $clr_primary;
+        font-size: 1.2rem;
+    }
+
+    .active a {
+        color: $clr_extra_options;
+    }
+
+    div.active {
+        border-bottom: 4px solid $clr_extra_options;
+
+
+    }
 }

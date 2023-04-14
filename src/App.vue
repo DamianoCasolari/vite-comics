@@ -19,15 +19,8 @@ export default {
 
 <template>
     <SiteHeader />
-    <main id="app_main">
-        <div class="main_content"></div>
-
-        <div class="extra_options">
-
-        </div>
-
-    </main>
+    <SiteMain />
     <SiteFooter />
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>
