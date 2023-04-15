@@ -1,29 +1,55 @@
 @use "./variables" as *;
+@use "./animation" as *;
 
 .container_header {
-    height: 115px;
     background-color: $clr_total_light;
 
+
     .menu_hamburger {
-        font-size: 30px;
+        font-size: 35px;
         font-weight: bold;
         border: none;
         background-color: transparent;
+        cursor: pointer;
 
     }
 
     a {
-        color: $clr_primary;
-        font-size: 1.2rem;
+        display: inline-block;
+        position: relative;
+        color: black;
+        transition-duration: 0.4s;
+    }
+
+    .nav_item:hover a {
+        transform: translate(-15%, -40%) scale(1.8);
+        filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.329));
+    }
+
+    div.active {
+        border-bottom: 4px solid $clr_extra_options;
     }
 
     .active a {
         color: $clr_extra_options;
     }
 
-    div.active {
-        border-bottom: 4px solid $clr_extra_options;
+}
 
+// MEDIA QUERY 
+
+@media screen and (min-width:360px) {
+    .container_header {
+        height: 115px;
+
+    }
+}
+
+@media screen and (min-width:992px) {
+    .container_header {
+        .logoDc {
+            filter: grayscale(0) !important;
+        }
 
     }
 }

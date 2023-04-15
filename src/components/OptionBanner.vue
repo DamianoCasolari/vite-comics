@@ -41,7 +41,7 @@ export default {
     <div class="extra_options">
         <div
             class="container-lg options_container fs_25 d-flex justify-content-center flex-wrap text-center align-items-center">
-            <a href="#" class="additional_option d-lg-flex" v-for="option in optionsArray">
+            <a href="#" class="additional_option d-lg-flex my-3" v-for="option in optionsArray">
                 <div class="img_container d-flex justify-content-center align-items-center">
                     <img :src="getImagePath(`../assets/img/${option.img}`)" :alt="option.name">
                 </div>
