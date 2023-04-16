@@ -1,7 +1,15 @@
-# Vue 3 + Vite
+## Dc comics site copy
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+    Created with Vite-Vue.js 3 in combination with Bootsrap,Google font, Sass
+---
 
-## Recommended IDE Setup
+## Features included 
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+fully responsive from smartphone to desktop
+
+the navbar menu below 992 px follows the user with its scroll up while it disappears with the scroll down
+
+each element is animated with different animations or transitions
+
+
