@@ -1,6 +1,8 @@
         
 <script>
 import { arrayDcComics, arrayShop, arrayDc, arraySites, socialIcon } from "../data/linksFooter"
+import { appearWithScroll } from '../assets/js/utilityMethods.js';
+
 
 export default {
     name: "SiteFooter",
@@ -10,13 +12,22 @@ export default {
             arrayDcComics: arrayDcComics,
             arrayShop: arrayShop,
             arrayDc: arrayDc,
-            arraySites: arraySites
+            arraySites: arraySites,
+            appearWithScroll: appearWithScroll
         }
     },
     methods: {
         getImagePath: function (name) {
             return new URL(`../assets/img/${name}`, import.meta.url).href
+        },
+        scrollFunction() {
+            const section = document.querySelector(".container_footer")
+            appearWithScroll(section)
         }
+    },
+    mounted() {
+        this.scrollFunction()
+
     }
 }
 </script>

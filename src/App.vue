@@ -13,6 +13,14 @@ export default {
         return {
 
         }
+    },
+    mounted() {
+        const anchorTags = document.querySelectorAll('a[href="#"]');
+        anchorTags.forEach(a => {
+            a.addEventListener('click', event => {
+                event.preventDefault();
+            });
+        });
     }
 }
 </script>

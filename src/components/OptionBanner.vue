@@ -1,19 +1,32 @@
         
 <script>
 import { optionsArray } from "../data/linksMainSection.js"
+import { appearWithScroll } from '../assets/js/utilityMethods.js';
+
 
 export default {
     name: "OptionBanner",
     data() {
         return {
-            optionsArray: optionsArray
+            optionsArray: optionsArray,
+            appearWithScroll: appearWithScroll
+
         }
 
     },
     methods: {
         getImagePath: function (name) {
             return new URL(`../assets/img/${name}`, import.meta.url).href
+        },
+
+        scrollFunction() {
+            const section = document.querySelector(".extra_options")
+            appearWithScroll(section)
         }
+    },
+    mounted() {
+        this.scrollFunction()
+
     }
 }
 </script>
@@ -40,7 +53,7 @@ export default {
 
 .extra_options {
     background-color: $clr_extra_options;
-
+    transition-duration: 1s;
 
     .options_container {
         padding: 15px 0;

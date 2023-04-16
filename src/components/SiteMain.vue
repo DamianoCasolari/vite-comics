@@ -3,6 +3,7 @@
 import OptionBanner from "./OptionBanner.vue"
 import SingleComic from "./SingleComic.vue"
 import arrayComicsInfo from '../data/dc-comics.json';
+import { appearWithScroll } from '../assets/js/utilityMethods.js';
 // import arrayComicsInfo from '../data/dc-comics.json' assert {type: 'json'};
 
 
@@ -14,9 +15,21 @@ export default {
     },
     data() {
         return {
-            arrayComicsInfo: arrayComicsInfo
+            arrayComicsInfo: arrayComicsInfo,
+            appearWithScroll: appearWithScroll
         }
     },
+    methods: {
+        scrollFunction() {
+            const section = document.querySelector(".row")
+            appearWithScroll(section)
+        }
+    },
+    mounted() {
+        this.scrollFunction()
+
+    }
+
 }
 </script>
         
@@ -30,7 +43,7 @@ export default {
         <div class="main_content container-lg">
             <div class="tag">current series</div>
 
-            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 ">
+            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 py-4">
                 <SingleComic v-for="comic, index in arrayComicsInfo" :img="arrayComicsInfo[index].thumb"
                     :text="arrayComicsInfo[index].series" />
             </div>
@@ -39,4 +52,8 @@ export default {
     </main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.row {
+    transition-duration: 1s;
+}
+</style>
