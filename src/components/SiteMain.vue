@@ -52,8 +52,4 @@ export default {
     </main>
 </template>
 
-<style lang="scss" scoped>
-.row {
-    transition-duration: 1s;
-}
-</style>
+<style lang="scss" scoped></style>

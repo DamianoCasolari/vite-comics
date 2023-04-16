@@ -1,6 +1,7 @@
 @use "./variables" as *;
 
 
+
 #app_main {
     background-color: $clr_primary;
 
@@ -32,6 +33,10 @@
             left: 25px;
             z-index: 1;
 
+        }
+
+        .row {
+            transition-duration: 1s;
         }
     }
 
