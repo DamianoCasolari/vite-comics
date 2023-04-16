@@ -1,6 +1,7 @@
 @use "./variables" as *;
 @use "./animation" as *;
 
+
 .container_header {
     background-color: $clr_total_light;
 
@@ -38,7 +39,7 @@
 
 // MEDIA QUERY 
 
-@media screen and (min-width:360px) {
+@media screen and (min-width:366px) {
     .container_header {
         height: 115px;
 

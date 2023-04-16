@@ -34,38 +34,41 @@ export default {
 @use "../assets/scss/partials/variables" as *;
 
 
-
-.nav_offcanvas {
-    background: linear-gradient(to top, $clr_primary, transparent);
+nav {
     position: fixed;
+    z-index: 10;
     top: 0px;
-
     width: 100%;
-    display: flex;
-    align-items: center;
 
     .nav_offcanvas {
-        margin: 30px 0;
-    }
+        background: linear-gradient(to top, $clr_primary, transparent);
 
-    .nav_item a {
-        color: $clr_total_light;
-        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.548)
-    }
+        display: flex;
+        align-items: center;
 
-    .nav_item:hover a {
-        color: $clr_extra_options;
-    }
 
-    div.active a {
-        color: $clr_extra_options;
-    }
+        .nav_offcanvas {
+            margin: 30px 0;
+        }
 
+        .nav_item a {
+            color: $clr_total_light;
+            text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.548)
+        }
+
+        .nav_item:hover a {
+            color: $clr_extra_options;
+        }
+
+        div.active a {
+            color: $clr_extra_options;
+        }
+    }
 }
 
 // MEDIA QUERY 
 
-@media screen and (min-width:360px) {
+@media screen and (min-width:366px) {
     .nav_offcanvas {
         height: 115px;
 

@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         getImagePath: function (name) {
-            return new URL(name, import.meta.url).href
+            return new URL(`../assets/img/${name}`, import.meta.url).href
         }
     }
 }
@@ -71,7 +71,7 @@ export default {
                     <div class="social_nav fw-bold d-flex">
                         <div v-for="icon in socialIcon">
                             <a class="text-dark mx-2" href="#">
-                                <img :src="getImagePath(`../assets/img/${icon.icon}`)" :alt="icon.name">
+                                <img :src="getImagePath(icon.icon)" :alt="icon.name">
                             </a>
                         </div>
                     </div>

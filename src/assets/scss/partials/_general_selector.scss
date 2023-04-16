@@ -11,10 +11,26 @@ body {
     font-family: 'Bebas Neue', cursive;
 }
 
-img {
+img:not(.my_jumbotron img) {
     max-width: 100%;
 }
 
 a {
     text-decoration: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: $clr_primary;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #555, #333);
+    border-radius: 6px;
+    transition: background 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #777, #555);
 }

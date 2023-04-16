@@ -32,10 +32,8 @@ export default {
         scrollFunction() {
             const currentPosition = window.pageYOffset;
             if (currentPosition > this.lastPosition) {
-                // scrollo verso il basso, nascondi l'elemento
                 this.menùHamburger = false;
             } else {
-                // scrollo verso l'alto, mostra l'elemento
                 this.menùHamburger = true;
             }
             this.lastPosition = currentPosition;
