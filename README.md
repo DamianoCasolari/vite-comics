@@ -1,7 +1,7 @@
 ## Dc comics site copy
 
     Created with Vite-Vue.js 3 in combination with Bootsrap,Google font, Sass
----
+    
 
 ## Features included 
 
